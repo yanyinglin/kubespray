@@ -1,5 +1,5 @@
 ---
-docker_version: '20.10'
+docker_version: 'latest'
 docker_cli_version: "{{ docker_version }}"
 
 docker_package_info:
@@ -36,9 +36,9 @@ podman_remove_packages_yum:
   - podman
 
 docker_remove_packages_apt:
-  - docker
-  - docker-engine
-  - docker.io
+  # - docker
+  # - docker-engine
+  # - docker.io
 
 # Docker specific repos should be part of the docker role not containerd-common anymore
 # Optional values for containerd apt repo

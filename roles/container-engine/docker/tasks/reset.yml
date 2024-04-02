@@ -48,7 +48,7 @@
   when: ansible_pkg_mgr == 'apt'
   changed_when: false
   with_items:
-    - "{{ docker_packages_list }}"
+    # - "{{ docker_packages_list }}"
     - "{{ containerd_package }}"
 
 - name: Docker | Remove docker package
