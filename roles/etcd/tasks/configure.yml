@@ -86,7 +86,7 @@
   register: etcd_cluster_is_healthy
   until: etcd_cluster_is_healthy.rc == 0
   retries: "{{ etcd_retries }}"
-  delay: "{{ retry_stagger | random + 3 }}"
+  delay: "{{ retry_stagger | random + 12 }}"
   changed_when: false
   check_mode: no
   run_once: yes
@@ -109,7 +109,7 @@
   register: etcd_events_cluster_is_healthy
   until: etcd_events_cluster_is_healthy.rc == 0
   retries: "{{ etcd_retries }}"
-  delay: "{{ retry_stagger | random + 3 }}"
+  delay: "{{ retry_stagger | random + 12 }}"
   changed_when: false
   check_mode: no
   run_once: yes
